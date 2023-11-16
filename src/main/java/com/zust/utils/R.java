@@ -1,4 +1,4 @@
-package com.zust.controller.utils;
+package com.zust.utils;
 
 import lombok.Data;
 

@@ -8,15 +8,11 @@ import java.util.List;
 
 
 public interface Bookservice {
-    public boolean save(Book book);
-    public boolean update(Book book);
-    public boolean delete(Integer id);
-    public Book getById(Integer id);
-    public List<Book> getAll();
-
-    public List<Book> getByPage(Integer current,Integer size);
-
-
-    public List<Book> getBy();
-
+    boolean save(Book book);
+    boolean update(Book book);
+    boolean delete(Integer id);
+    Book getById(Integer id);
+    List<Book> getAll();
+    IPage<Book> getByPage(Integer current, Integer size);
+    IPage<Book> getByPage(Integer current, Integer size, Book book);
 }

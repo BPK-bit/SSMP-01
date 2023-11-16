@@ -45,10 +45,5 @@ public class BookServiceTest {
         Book book = bookService.getById(1);
         System.out.println(book);
     }
-    @Test
-    void testGetByPage(){
-        List<Book> books = bookService.getByPage(1, 5);
-        System.out.println(books);
 
-    }
 }
