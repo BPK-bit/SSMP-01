@@ -52,7 +52,11 @@ public class MPConfig extends WebMvcConfigurationSupport {
      */
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        //解决静态资源无法访问
+        registry.addResourceHandler("/*/books.html").addResourceLocations("classpath:/static/");
+        //解决Swagger无法访问
         registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
+        //解决Swagger的js文件无法访问
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
@@ -60,20 +64,20 @@ public class MPConfig extends WebMvcConfigurationSupport {
      * 注册拦截器
      * @param registry
      */
-//    @Override
-//    protected void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(jwtTokenInterceptor())//配置JWT的拦截规则
-//                .addPathPatterns("/books");//拦截所有请求路径
-//
-//        super.addInterceptors(registry);
-//    }
+    @Override
+    protected void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(jwtTokenInterceptor())//配置JWT的拦截规则
+                .addPathPatterns("/books/**");//拦截所有请求路径
+
+        super.addInterceptors(registry);
+    }
 
     /**
      * 注入JWT拦截器
      * @return
      */
-//    @Bean
-//    public JwtTokenInterceptor jwtTokenInterceptor(){
-//        return new JwtTokenInterceptor();
-//    }
+    @Bean
+    public JwtTokenInterceptor jwtTokenInterceptor(){
+        return new JwtTokenInterceptor();
+    }
 }

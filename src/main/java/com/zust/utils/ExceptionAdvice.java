@@ -11,6 +11,6 @@ public class ExceptionAdvice {
         //通知运维
         //通知开发
         ex.printStackTrace();
-        return new R("出现异常啦");
+        return new R(ex.getMessage());
     }
 }
