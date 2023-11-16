@@ -5,10 +5,12 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.zust.service.impl.BookServiceimpl2;
 import com.zust.utils.R;
 import com.zust.domain.Book;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
+@Api(tags = "图书相关接口")
 @RestController
 @RequestMapping("/books")
 public class BookController2 {
@@ -20,6 +22,7 @@ public class BookController2 {
      * @param book
      * @return
      */
+    @ApiOperation("新增图书")
     @PostMapping
     public R save(@RequestBody Book book){
         return new R(bookService.save(book));
@@ -30,6 +33,7 @@ public class BookController2 {
      * @param book
      * @return
      */
+    @ApiOperation("修改图书信息")
     @PutMapping
     public R update(@RequestBody Book book){
         boolean flag = bookService.update(book);
@@ -41,6 +45,7 @@ public class BookController2 {
      * @param id
      * @return
      */
+    @ApiOperation("删除数据")
     @DeleteMapping("{id}")
     public R delete(@PathVariable Integer id){
         return new R(bookService.delete(id));
@@ -51,6 +56,7 @@ public class BookController2 {
      * @param id
      * @return
      */
+    @ApiOperation("查询单条数据")
     @GetMapping("{id}")
     public R getById(@PathVariable Integer id){
 
@@ -61,6 +67,7 @@ public class BookController2 {
      * 查询全部
      * @return
      */
+    @ApiOperation("查询全部")
     @GetMapping
     public R getAll(){
         return new R(true,bookService.getAll());
@@ -73,6 +80,7 @@ public class BookController2 {
      * @param book
      * @return
      */
+    @ApiOperation("分页查询")
     @GetMapping("{current}/{size}")
     public R getByPage(@PathVariable Integer current, @PathVariable Integer size,Book book){
         System.out.println(book);

@@ -18,3 +18,11 @@ spring:
       password: tz6566601
       username: root
 
+
+logging:
+  level:
+    com:
+      zust:
+        dao: debug
+        service: info
+        controller: info
