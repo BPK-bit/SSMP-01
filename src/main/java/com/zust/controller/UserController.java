@@ -1,9 +1,9 @@
 package com.zust.controller;
 
 
-import com.zust.domain.User;
-import com.zust.domain.UserDTO;
-import com.zust.domain.UserVO;
+import com.zust.domain.Entities.User;
+import com.zust.domain.DTO.UserDTO;
+import com.zust.domain.VO.UserVO;
 import com.zust.service.UserService;
 import com.zust.utils.R;
 import com.zust.utils.TokenUtils;

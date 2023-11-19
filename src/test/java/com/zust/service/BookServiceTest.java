@@ -1,6 +1,6 @@
 package com.zust.service;
 
-import com.zust.domain.Book;
+import com.zust.domain.Entities.Book;
 import com.zust.service.impl.BookServiceimpl2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

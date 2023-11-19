@@ -1,7 +1,7 @@
 package com.zust.service.impl;
 
 import com.zust.dao.UserMapper;
-import com.zust.domain.User;
+import com.zust.domain.Entities.User;
 import com.zust.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

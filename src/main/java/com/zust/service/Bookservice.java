@@ -1,7 +1,7 @@
 package com.zust.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.zust.domain.Book;
+import com.zust.domain.Entities.Book;
 
 
 import java.util.List;

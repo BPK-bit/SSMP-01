@@ -1,7 +1,6 @@
 package com.zust.service;
 
-import com.zust.domain.User;
-import org.springframework.stereotype.Service;
+import com.zust.domain.Entities.User;
 
 
 public interface UserService {

@@ -1,13 +1,12 @@
-package com.zust.domain;
+package com.zust.domain.Entities;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class UserVO {
+public class User {
     private Integer id;
     private String name;
     private String password;
-    private String token;
 }

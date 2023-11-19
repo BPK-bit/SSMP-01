@@ -1,4 +1,4 @@
-package com.zust.domain;
+package com.zust.domain.Entities;
 
 import lombok.Data;
 

@@ -1,8 +1,7 @@
 package com.zust.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.zust.domain.Book;
+import com.zust.domain.Entities.Book;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

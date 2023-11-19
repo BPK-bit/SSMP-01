@@ -1,6 +1,6 @@
 package com.zust.dao;
 
-import com.zust.domain.User;
+import com.zust.domain.Entities.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

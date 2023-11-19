@@ -1,4 +1,4 @@
-package com.zust.domain;
+package com.zust.domain.DTO;
 
 import lombok.Data;
 
